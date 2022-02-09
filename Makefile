@@ -1,5 +1,8 @@
 MAIN=src/main.py
+PYCACHES=$(wildcard src/*/__pycache__)
 
+clean:
+	rm -rf $(PYCACHES)
 
 run:
 	python $(MAIN)

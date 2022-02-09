@@ -1,6 +1,11 @@
+MAIN=src/main.py
+
+
+run:
+	python $(MAIN)
 
 vim:
-	vim src/*/*.py
+	nvim src/*/*.py
 
 git-update:
 	git add Makefile README.md src/

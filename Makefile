@@ -5,7 +5,7 @@ run:
 	python $(MAIN)
 
 vim:
-	nvim src/*/*.py
+	nvim $(MAIN) src/*/*.py
 
 git-update:
 	git add Makefile README.md src/

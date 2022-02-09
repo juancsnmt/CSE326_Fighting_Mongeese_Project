@@ -1,6 +1,6 @@
-import paths.paths
+import path.path
 
-class rooms:
+class room:
     def __init__(self, *args, **kwargs):
         self.path_no = 0
         if 'above' in kwargs:
@@ -10,13 +10,13 @@ class rooms:
         if 'right' in kwargs:
             self.paths[self.path_no] = copy.deepcopy(kwargs.get('above'))
             self.path_no += 1
-            self.right = copy.deepcopy(kwargs.get('right'))
+            self.right_index = copy.deepcopy(kwargs.get('right'))
         if 'below' in kwargs: 
             self.paths[self.path_no] = copy.deepcopy(kwargs.get('above'))
             self.path_no += 1
-            self.below = copy.deepcopypaths(kwargs.get('below'))
+            self.below_index = copy.deepcopypaths(kwargs.get('below'))
         if 'left' in kwargs:
             self.paths[self.path_no] = copy.deepcopy(kwargs.get('above'))
             self.path_no += 1            
-            self.left = copy.deepcopypaths(kwargs.get('left'))
+            self.left_index = copy.deepcopypaths(kwargs.get('left'))
  

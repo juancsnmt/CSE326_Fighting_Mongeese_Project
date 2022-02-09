@@ -1,13 +1,13 @@
-import rooms.rooms
-import constants.positions
+import room.room
+import constants.position
 
-class paths:
+class path:
     def __init__(self, *args, **kwargs):
         if 'position' in kwargs:
             self.position = kwargs.get('position')
-            if self.position == positions.VERT:
+            if self.position == position.VERT:
                 self.name = "|"
-            elif self.position == positions.HORZ:
+            elif self.position == position.HORZ:
                 self.name = "-"
 
     def get_position(self):

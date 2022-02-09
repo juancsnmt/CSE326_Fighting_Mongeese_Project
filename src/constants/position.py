@@ -1,4 +1,4 @@
 from enum import Enum
-class Position(Enum):
+class position(Enum):
     VERT = 0
     HORZ = 1

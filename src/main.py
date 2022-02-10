@@ -1,4 +1,3 @@
-import path.path
 import room.room
 
 if __name__ == "__main__":

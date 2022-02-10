@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+\def\cdate{{Spring 2022}}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{txfonts}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{txfonts}
+\usepackage{sectsty}
+\usepackage{soul}
+\usepackage{yfonts}
+\textwidth=17truecm
+\textheight=20truecm
+\oddsidemargin=0pt
+\evensidemargin=0pt
+\parindent=0pt
+
+\def\EE{\,\mathbb{E}\,}
+\def\II{\,\mathbb{I}\,}
+\def\RR{\,\mathbb{R}\,}
+\def\QQ{\,\mathbb{Q}\,}
+\def\ZZ{\,\mathbb{Z}\,}
+\def\n{\,$\char`\\ n$\,}
+\def\tab{\,$\quad \quad$\,}
+\def\small{\,\par \smallskip\,}
+\def\med{\,\par \medskip\,}
+\def\big{\,\par \bigskip\,}
+\newcommand{\csfont}[1]{\fontfamily{cmtt}\selectfont #1}
+\newcommand{\us}[2]{#1_{1}, \; #1_{2}, \; \dots, \; #1_{#2}}
+\newcommand{\room}[1]{\textgoth{R}$_{#1}$}
+
+\makeatother
+\pagestyle{myheadings}
+\markboth{\small\it Fighting Mongeese: Unamed Dungeon Project \cdate}
+{\small\it Fighting Mongeese: Unamed Dungeon Project \cdate}
+\makeatletter
+\renewcommand{\@evenhead}{\raisebox{0pt}[\headheight][0pt]{\vbox{\hbox
+to \textwidth{\thepage\hfil\strut\leftmark}\hrule}}}
+\renewcommand{\@oddhead}{\raisebox{0pt}[\headheight][0pt]{\vbox{\hbox
+to \textwidth{\rightmark\hfil\strut\thepage}\hrule}}}
+\makeatother
+\begin{document}
+\begin{titlepage}
+%\thispagestyle{empty}
+\null
+\vspace{-40mm}
+\hspace*{90truemm}{\hrulefill}\par\vskip-4truemm\par
+\hspace*{90truemm}{\hrulefill}\par\vskip5mm\par
+\hspace*{100truemm}{{\large\sc New Mexico Tech {\rm (\cdate)}}}\vskip4mm\par
+\hspace*{90truemm}{\hrulefill}\par\vskip-4truemm\par
+\hspace*{90truemm}{\hrulefill}
+\par
+\bigskip
+\bigskip
+\par
+\vspace{3cm}
+\centerline{\LARGE\bf Proof of Correctness of Generation of Dungeon}
+\bigskip
+\centerline{\large\bf
+Matthew C. Lindeman
+}
+\bigskip
+\centerline{\it New Mexico Institute of Mining and Technology}
+\centerline{\it Socorro, NM 87801, USA}
+\centerline{\it E-mail:
+matthew.lindeman@student.nmt.edu
+}
+\bigskip
+\centerline{Date:
+February 06, 2022
+}
+\bigskip
+\end{titlepage}
+
+\section*{Existance of the Universe and Related Objects}
+    Suppose a cartesian product of $\RR$ and $\RR$ called the \textbf{dungeon
+    grounds}.
+    \small
+    Suppose a collection of data called a \textbf{room} such that for any room:
+    $$\mbox{room} = \{ \us{\mbox{room}}{n}, \; n, \; \mbox{shape}, \; \mbox{depth} \}$$
+    Where $n, \; \mbox{depth} \in \II$, and shape is defined to be:
+    $$\mbox{shape} \begin{cases} \mbox{square} \\ \mbox{circle} \\ \mbox{line}
+    \\ \end{cases}$$
+    Such that $\{$ is representative of inheritance of objects (parent left,
+    children right).
+    Where square, circle, and line are all sets defined as follows:
+    $$\mbox{shape} = \{\mbox{co}\_\mbox{center} \; | \; \mbox{co}\_\mbox{center}
+    \in \RR \}$$
+    $$\mbox{square} = \{\mbox{shape}, \; \mbox{height}, \; \mbox{width}\}$$
+    $$\mbox{circle} = \{\mbox{shape}, \; \mbox{radius}\}$$
+    $$\mbox{line} = \{\mbox{shape}, \mbox{r1}, \; \mbox{r2}, \; \theta\}$$
+    Suppose some $\lambda \in \RR$.
+
+\section*{Dungeon Generation}
+    Suppose some dungeon grounds.
+    \small
+    In reference to a particular room the notation: \room{k} such that the member
+    $n = k$ for any shape.
+    \small
+    The generation of a room is to be determined by executing this following
+    process:
+    \small
+    Find the probability of generating a new generation of rooms given an
+    expoenetial distribution with parameters $\lambda,$ depth.
+    \small
+    Choose to either generate a new generation of rooms or stop with the current
+    room based off the probability determined by the expoenetial distribution.
+
+\end{document}

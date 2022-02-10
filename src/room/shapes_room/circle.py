@@ -1,4 +1,4 @@
-import shape
+import room.shapes_room.shape
 
 class circle(shape):
     def __init__(self, *args, **kwargs):
